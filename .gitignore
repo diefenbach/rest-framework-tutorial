@@ -1,9 +1,16 @@
-*.db
+*.cache
+*.egg-info/
+*.DS_Store
 *.pyc
-*~
-.*
-env
-
-# Accept these files in the repository
-!.gitignore
-!.travis.yml
+*.pyo
+*.sass-cache/
+*dlcache/
+*media/
+*sitestatic/
+*.mr.developer.cfg
+*.vagrant
+__pycache__
+_build/
+src/
+project/
+db.sqlite3

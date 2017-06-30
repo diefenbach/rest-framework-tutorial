@@ -3,7 +3,6 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
@@ -11,17 +10,14 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('authors', '__first__'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Snippet',
+            name='Author',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(blank=True, default=b'', max_length=100)),
-                ('code', models.TextField()),
-                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='snippets', to='authors.Author')),
+                ('name', models.CharField(blank=True, default=b'', max_length=100)),
             ],
         ),
     ]
